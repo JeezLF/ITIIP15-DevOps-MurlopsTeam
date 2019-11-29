@@ -4,7 +4,7 @@ node {
 	  
    }
    stage('Build') {
-		sh 'gradlew build'
+		sh 'mvn -B -DskipTests clean package'
    }
    stage('Results') {
    }
