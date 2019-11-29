@@ -1,14 +1,11 @@
 node {
    stage('Clone') { // for display purposes		
-		echo 'git clone'
 		git 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
 	  
    }
    stage('Build') {
-		echo 'build'
 		sh 'gradlew build'
    }
    stage('Results') {
-		echo 'result'
    }
 }
