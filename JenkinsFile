@@ -14,13 +14,13 @@ node {
 		  }
 	  }
    }
-   stage('Results') {
+   /*stage('Results') {
 		dir("retwisj/target"){
 			sh 'ls -lah *.war'
 		}
       junit '*/target/surefire-reports/TEST-.xml'
       archiveArtifacts 'target/*.jar'
-   }
+   }*/
    stage('Docker') {   
 	sh 'docker build -t retwisj'
    }
