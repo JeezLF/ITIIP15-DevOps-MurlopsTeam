@@ -1,8 +1,4 @@
 node {
-   stage('Clone') { // for display purposes		
-		git 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
-	  
-   }
    stage('Build') {
 		sh 'mvn -B -DskipTests clean package'
    }
