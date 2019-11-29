@@ -1,9 +1,11 @@
 node {
    def mvnHome
    stage('Preparation') { // for display purposes
-		
+	  
+	  sh 'pwd'
 	  sh 'cd retwisj'
 	  sh 'ls -lah'
+	  sh 'pwd'
       mvnHome = tool 'M3'
    }
    stage('Build') {
