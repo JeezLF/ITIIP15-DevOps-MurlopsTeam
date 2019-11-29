@@ -121,26 +121,63 @@ public class WebUtilsTest {
 	}
 	@Test
 	public void testTimeInWordsFewDays() {
-		long time = System.currentTimeMillis() - (60 * 60 * 24 * 19 * 1000);
+		long time = System.currentTimeMillis() - (60L * 60L * 24L * 19L * 1000L);
 		String retour = WebUtils.timeInWords(time);
-		System.out.println(retour);
 		assertEquals("time.days#19", retour);
 	}
 	@Test
 	public void testTimeInWordsThirtyDays() {
-		long time = System.currentTimeMillis() - (60 * 60 * 24 * 30 * 1000);
-		System.out.println(time);
-
+		long time = System.currentTimeMillis() - (60L * 60L * 24L * 30L * 1000L);
 		String retour = WebUtils.timeInWords(time);
 		assertEquals("time.month", retour);
 	}
 	@Test
-	public void testTimeInWordsSixMont() {
-		long time = System.currentTimeMillis() - (60 * 60 * 24 * 30 * 1000 *6);
-		System.out.println(time);
+	public void testTimeInWordsSixMonths() {
+		long time = System.currentTimeMillis() - (60L * 60L * 24L * 30L * 1000L *6L);
 		String retour = WebUtils.timeInWords(time);
-		System.out.println(retour);
-		assertEquals("time.month#6", retour);
+		assertEquals("time.months#6", retour);
 	}
-
+	@Test
+	public void testTimeInWordsNineMonths() {
+		long time = System.currentTimeMillis() - (60L * 60L * 24L * 30L * 1000L *9L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.months#9", retour);
+	}
+	@Test
+	public void testTimeInWordsOneYear() {
+		long time = System.currentTimeMillis() - (60L * 60L * 24L * 30L * 1000L * 12L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.months#12", retour);
+	}
+	@Test
+	public void testTimeInWordsThirteenMonths() {
+		long time = System.currentTimeMillis() - (long)(60L * 60L * 24L * 30L * 1000L * 13L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.year", retour);
+	}
+	@Test
+	public void testTimeInWordsTwentyThreeMonths() {
+		long time = System.currentTimeMillis() - (long)(60L * 60L * 24L * 30L * 1000L * 23L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.year", retour);
+	}
+	@Test
+	public void testTimeInWordsTwentyFourMonths() {
+		long time = System.currentTimeMillis() - (long)(60L * 60L * 24L * 30L * 1000L * 24L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.year", retour);
+	}
+	
+	@Test
+	public void testTimeInWordsTwentyFiveMonths() {
+		long time = System.currentTimeMillis() - (long)(60L * 60L * 24L * 30L * 1000L * 25L);
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.years#2", retour);
+	}
+	@Test
+	public void testTimeInWordsOrigin() {
+		long time = System.currentTimeMillis() - 1575032272989L;
+		String retour = WebUtils.timeInWords(time);
+		assertEquals("time.years#49", retour);
+	}
 }
