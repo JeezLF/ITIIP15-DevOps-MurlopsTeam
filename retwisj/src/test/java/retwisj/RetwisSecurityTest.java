@@ -25,7 +25,7 @@ public class RetwisSecurityTest {
 	
 	@Test
 	public void testUserIsSigned() {
-		assert RetwisSecurity.isSignedIn();
+		assert RetwisSecurity.isSignedIn();  
 	}
 	
 	@Test
