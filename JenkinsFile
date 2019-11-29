@@ -3,9 +3,10 @@ node {
    stage('Preparation') { // for display purposes
 	  
 	  sh 'pwd'
-	  sh 'cd retwisj'
 	  sh 'ls -lah'
+	  sh 'cd retwisj'
 	  sh 'pwd'
+	  sh 'ls -lah'
       mvnHome = tool 'M3'
    }
    stage('Build') {
