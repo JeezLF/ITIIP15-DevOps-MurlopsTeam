@@ -4,7 +4,7 @@ node {
 	  
       mvnHome = tool 'M3'
    }
-   stage('Build') {
+   stage('Maven') {
       // Run the maven build
 	  dir("retwisj"){
 		  withEnv(["MVN_HOME=$mvnHome"]) {
@@ -16,9 +16,12 @@ node {
    }
    stage('Results') {
 		dir("retwisj/target"){
-			sh 'ls -lah'
+			sh 'ls -lah *.war'
 		}
       junit '*/target/surefire-reports/TEST-.xml'
       archiveArtifacts 'target/*.jar'
+   }
+   stage('Docker') {   
+	sh 'docker build -t retwisj'
    }
 }
