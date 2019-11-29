@@ -1,7 +1,6 @@
-package redis;
+package org.springframework.data.redis.samples.retwisj.redis;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.data.redis.samples.retwisj.redis.RetwisRepository;
 
 public class RetwisRepositoryTest {
 

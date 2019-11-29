@@ -1,4 +1,4 @@
-package retwisj;
+package org.springframework.data.redis.samples.retwisj;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;

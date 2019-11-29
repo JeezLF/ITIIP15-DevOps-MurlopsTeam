@@ -1,4 +1,4 @@
-package web;
+package org.springframework.data.redis.samples.retwisj.web;
 import org.junit.Test;
 
 public class RetwisControllerTest {
