@@ -1,7 +1,8 @@
 node {
    def mvnHome
    stage('Preparation') { // for display purposes
-
+		
+	  cd retwisj
       mvnHome = tool 'M3'
    }
    stage('Build') {
