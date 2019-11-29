@@ -15,6 +15,9 @@ node {
 	  }
    }
    stage('Results') {
+		dir("retwisj/target"){
+			sh 'ls -lah'
+		}
       junit '*/target/surefire-reports/TEST-.xml'
       archiveArtifacts 'target/*.jar'
    }
