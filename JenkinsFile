@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('Preparation') { // for display purposes
 		
-	  cd retwisj
+	  sh 'cd retwisj'
       mvnHome = tool 'M3'
    }
    stage('Build') {
