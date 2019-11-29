@@ -1,9 +1,7 @@
 node {
-   def mvnHome
-   def gitRep = 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
    stage('Clone') { // for display purposes		
 		echo 'git clone'
-		git $gitRep
+		git 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
 	  
    }
    stage('Build') {
