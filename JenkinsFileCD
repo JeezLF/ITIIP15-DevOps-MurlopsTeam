@@ -10,7 +10,7 @@ pipeline {
 				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
             }
         }
-		stage('VM') {
+		stage('pull VM') {
             steps {
 				sh 'docker pull luca83000/retwisj:latest'
 				echo 'First'
