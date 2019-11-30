@@ -18,11 +18,7 @@ node {
 		dir("retwisj/target"){
 			sh 'ls -lah *.war'
 		}
-		sh 'pwd'
-
-		sh 'ls -lah'
-		sh 'pwd'
-		junit 'TEST-.xml'
+		//junit 'TEST-.xml'
 		//archiveArtifacts 'target/*.jar'
 
       
