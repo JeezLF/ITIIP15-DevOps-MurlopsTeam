@@ -1,4 +1,7 @@
-node {
+pipeline {
+	agent any
+	stages{
+	
 	def mvnHome
 	
     stage('Preparation') { // for display purposes
@@ -29,5 +32,5 @@ node {
 		sh 'docker build -t conteneur-retwis .'
 		echo 'docker'
    }
-
+   }
 }
