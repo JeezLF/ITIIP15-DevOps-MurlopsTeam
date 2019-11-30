@@ -1,36 +1,30 @@
 pipeline {
-	agent any
-	stages{
-	
-	def mvnHome
-	
-    stage('Preparation') { // for display purposes
-	  
-      mvnHome = tool 'M3'
-   }
-   stage('Maven') {
-      // Run the maven build
-	  dir("retwisj"){
-		  withEnv(["MVN_HOME=$mvnHome"]) {
-			sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
-		  }
-	  }
-   }
-   stage('Results') {
-		dir("retwisj/target"){
-			sh 'ls -lah *.war'
-		}
-		//junit 'TEST-.xml'
-		//archiveArtifacts 'target/*.jar'
-
-      
-   }
-   
-   stage('Docker') {   
-		sh 'ls -R'
-		echo "docker build -t conteneur-retwis ."
-		sh 'docker build -t conteneur-retwis .'
-		echo 'docker'
-   }
-   }
+    agent any
+    tools {
+        maven 'M3'
+    }
+    stages {
+        stage('scm'){
+            steps{
+                git branch: 'master',
+                credentialsId: 'GitHub username and mdp',
+                url: 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
+            }
+        }
+        stage('Build') {
+            steps {
+               dir("retwisj"){
+                       sh 'mvn -Dmaven.test.failure.ignore clean package'
+               }
+            }
+        }
+         stage('Docker') {
+            steps {
+                   sh '/usr/bin/docker build -t retwisj:latest .'
+                   sh 'docker tag retwisj:latest luca83000/retwisj:latest'
+                   sh "docker login -u luca83000 -p mewti83000"
+                   sh 'docker push luca83000/retwisj:latest'
+            }
+        }
+    }
 }
