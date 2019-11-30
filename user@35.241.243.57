@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "murlops",
+  "private_key_id": "155b8e82c1d30abfec2522853c1ded462b3f0bd9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC2X21B+qXdvl2O\nToKJxI7WISReTlaBFP5AHvSSj9l7qACpaGVUMMkxIWlB3mkjFAQahgWQLMjcmKJ5\n4NhuZZXy+NUJSxfXThWiqkZDqOQOpTYDxkk5ecDfAKJrlkf+kOPyv3Hw4WC+LESF\npHmgCXBocblA+uHi3sUkzhPVZIGs2uAmpWTL+dkH9vXnmSYnctiBhuYmFAeEo87w\nrZFEoxdGZ6GSaclcxl4JkQltPYC/Yq/1fT6nibZASvoC82PC92Pl5lw29NuCHY2G\n1TvAsP1xeTocWDI9S2irG1VU5ic1iC03HxNCAwpxMQI3V2fedRZ+zjaAdK7zZvO3\ngKgTsBaBAgMBAAECggEAEbxfDkMXfWSliZDmDgrhDz8C3+8DZ6NIhKjeBSDbODTi\n95axAAqMjmwe5eqA1An+yiuNf/NzB00KxAqTUc0sU4hSg4hbhbNQ1FR159+Vaj0z\n7xMKDP5jvOw9X3QqhT3HBVUL+i6Y73WzpkGUGHXCik3BA+pCLIOYrZcjA6Y2HD60\nr4ec/sn/Cq/o6Q7Op8UQUFd0CHYZm2VOP5rSlvdo731GYUISeZkOI7t3oz+e25XA\nu7JHcoqCnlM2GE0zGsvU6X/F3dZh7MuOFJ08r82MRpTU7ZOLIOfmp8OLXTlKYUVo\n5FN+g6L2JcZoYSH6Sjz8OA4GwszNOFOadUjjRg5xdwKBgQDyQGgRN7EGcM3twXhi\nB0DkYF68zGJd6Rq4Podtmxtd67nIY6L6QNOOdhV6iy/OELgbKw8GGsezOWR4DTC5\nqEf3Q6/9dxBGsy5VFUi2/xMC7N7W7hSZlmzRnyHMqF2t0E9yvd5lZ7g7ZGHF0imd\nVg8IWQwz/sGz53S/OZdUZPKGhwKBgQDAuQ9+5wwof7SBZGrN3O2G5qn77PqAW1+S\nK7WgKotc74HFZkSuTnn7JR8UlofMnxjyCfP9MPWef05H0ZlRJ/Z4XnbnFvalRPbG\n2K7osEF+E9oXP/+lkT0edfxXI1viqzhHsF2Lhnx2iLhqTb9ghnWpXlzHKvpBRbZd\nqrP70i20twKBgQCS8I4vI2C1T2cZd+jVTSEHZY0RZ8eivun+J69txE9tQLaH3ifV\nM80e9HFCy3pLu8hwckXCpivLglx2lUmg03oTeXMeg0HUIItSAH8CwOV/OL5SEEde\ngeevnp6ZzOZFr70BFDn5uFf/bnv/yeKEFNc5cQn93+EOhq5B72TjQ/f3sQKBgGS2\nUOq4QxpG4kVb/JRoB5ifoeUNCjtZhLAWN2vjz8BZSS+nKe0NBaHA3GUd5QmBer/B\ng8ekdjbFwFq3pa9LevmcI/bPgUUMrQls4rqmoRMJvMa5oxcatx3b+mpvB+2EHH0a\nJUhsl046VGT5DDGdEo/XyBQs2WqSy6JXOoc2ZrwxAoGBANyksaedWqEBRF2HIXS4\n2H/44wpVujdoJuu1hP/NLkYIi1VmWKzwkTj+GW0y/s0yXhzD1Cyil46WddoASvE8\nVnKS7df5uLZrOryzP7RvIl+k9y1Zi2Vo2qZvAo3a8DpmTnGyVPw6uevBg64pfC66\n//ZEKUrpNyPSyJrXK3qYGa3k\n-----END PRIVATE KEY-----\n",
+  "client_email": "murlops-service@murlops.iam.gserviceaccount.com",
+  "client_id": "101669812713136100335",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/murlops-service%40murlops.iam.gserviceaccount.com"
+}
