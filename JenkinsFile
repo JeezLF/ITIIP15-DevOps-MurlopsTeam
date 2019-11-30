@@ -18,7 +18,7 @@ node {
    }
    stage('Results') {
 		dir("retwisj/target"){
-			sh 'ls -lah *.war'
+			//sh 'ls -lah *.war'
 		}
 		//junit 'TEST-.xml'
 		//archiveArtifacts 'target/*.jar'
