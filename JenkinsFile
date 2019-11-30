@@ -26,7 +26,7 @@ node {
    
    stage('Docker') {   
 		sh 'pwd'
-		path = sh 'pwd'
+		path = sh(script: 'pwd', ,returnStout: true).trim()
 		echo 'path'
 		echo "${path}"
 		sh 'ls -lah'
