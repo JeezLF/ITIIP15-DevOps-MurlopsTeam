@@ -12,9 +12,7 @@ node {
       // Run the maven build
 	  dir("retwisj"){
 		  withEnv(["MVN_HOME=$mvnHome"]) {
-
-			sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
-
+			//sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
 		  }
 	  }
    }
@@ -31,8 +29,8 @@ node {
    stage('Docker') {   
 		echo "${PATH}"
 		sh 'ls -lah'
-		echo "docker build -t ${PATH}/retwisj ${PATH}"
-		sh "docker build -t ${PATH}/retwisj ${PATH}"
+		echo "docker build -t ${PATH} ${PATH}"
+		sh "docker build -t ${PATH} ${PATH}"
 		echo 'docker'
    }
 
