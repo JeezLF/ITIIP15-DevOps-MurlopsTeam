@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('GetVM') {
             steps {
-				sh 'ls -lah'
 				sh 'gcloud auth activate-service-account --key-file /home/clementlegrosdw/murlops-155b8e82c1d3.json'
 				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
 				sh 'ls -lah'
