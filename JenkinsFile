@@ -20,10 +20,12 @@ pipeline {
         }
          stage('Docker') {
             steps {
+		script {
                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
                    sh 'docker tag retwisj:latest luca83000/retwisj:latest'
                    docker.withRegistry( '', 'DockerHub' )
                    dockerImage.push()
+			}
             }
         }
     }
