@@ -1,9 +1,10 @@
 node {
-   def mvnHome
-   sh "pwd > pathTmp" 
-	path = readFile('pathTmp').trim()
-	echo "${path}"
-   stage('Preparation') { // for display purposes
+	def mvnHome
+	sh "pwd > pathTmp" 
+	PATH = readFile('pathTmp').trim()
+	echo "PATH = ${PATH}"
+	
+    stage('Preparation') { // for display purposes
 	  
       mvnHome = tool 'M3'
    }
@@ -28,9 +29,9 @@ node {
    }
    
    stage('Docker') {   
-		echo "${path}"
+		echo "${PATH}"
 		sh 'ls -lah'
-		sh 'docker build -t retwisj .'
+		sh "docker build -t ${PATH}/retwisj ${PATH}"
 		echo 'docker'
    }
 
