@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    tools {
+        maven 'M3'
+    }
+    stages {
+        stage('GetVM') {
+            steps {
+				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
+				//sh 'docker pull luca83000/retwisj:latest'
+				sh 'ls -lah'
+            }
+        }
+         stage('Docker') {
+            steps {
+               
+            }
+        }
+    }
+}
