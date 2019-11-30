@@ -4,13 +4,13 @@ pipeline {
         maven 'M3'
     }
     stages {
-        stage('scm'){
-            steps{
-                git branch: 'master',
-                credentialsId: 'GitHub username and mdp',
-                url: 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
-            }
-        }
+        //stage('scm'){
+        //    steps{
+        //        git branch: 'master',
+        //        credentialsId: 'GitHub username and mdp',
+        //        url: 'https://github.com/JeezLF/ITIIP15-DevOps-MurlopsTeam.git'
+        //    }
+        //}
         stage('Build') {
             steps {
                dir("retwisj"){
