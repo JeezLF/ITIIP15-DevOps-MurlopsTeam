@@ -17,11 +17,9 @@ pipeline {
                        sh 'mvn -Dmaven.test.failure.ignore clean package'
                }
             }
-			
         }
-				
-        stage('Docker') {
-        steps {
+         stage('Docker') {
+            steps {
 		script {
 			docker.withRegistry( '', 'DockerHub' ) {
 			
@@ -33,7 +31,7 @@ pipeline {
         }
 	stage('Test') {
 		steps {
-            junit '*/target/surefire-reports/TEST-.xml'it 'retwisj/out/report/TEST-.xml'
+			junit 'retwisj/target/surefire-reports/TEST-.xml'
 			}
         }
     }
