@@ -18,10 +18,13 @@ node {
 		dir("retwisj/target"){
 			sh 'ls -lah *.war'
 		}
-      junit '*/target/surefire-reports/TEST-.xml'
+      junit '*/target/report/TEST-.xml'
       archiveArtifacts 'target/*.jar'
    }
+   
    stage('Docker') {   
 	sh 'docker build -t retwisj'
+	echo 'docker'
    }
+
 }
