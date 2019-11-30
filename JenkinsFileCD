@@ -11,10 +11,5 @@ pipeline {
 				sh 'ls -lah'
             }
         }
-         stage('Docker') {
-            steps {
-               
-            }
-        }
     }
 }
