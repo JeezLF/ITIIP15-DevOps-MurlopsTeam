@@ -22,7 +22,7 @@ node {
 
 		sh 'ls -lah'
 		sh 'pwd'
-		junit 'retwisj/out/report/TEST-.xml'
+		junit 'TEST-.xml'
 		//archiveArtifacts 'target/*.jar'
 
       
