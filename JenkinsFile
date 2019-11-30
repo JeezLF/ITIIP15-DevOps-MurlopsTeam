@@ -25,8 +25,11 @@ node {
    }
    
    stage('Docker') {   
-	sh 'pwd'
-	sh 'ls -lah'
+		sh 'pwd'
+		path = 'pwd'
+		echo 'path'
+		echo $path
+		sh 'ls -lah'
 		sh 'docker build -t retwisj .'
 		echo 'docker'
    }
