@@ -12,7 +12,7 @@ pipeline {
 		}
 		stage('yaml') {
 			steps {
-				sh 'kubectl apply deploy.yaml'
+				sh 'kubectl apply -f ./deploy.yaml'
 			}
 		} 		
     }
