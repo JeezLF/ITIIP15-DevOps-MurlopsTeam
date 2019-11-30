@@ -31,10 +31,7 @@ pipeline {
         }
 	stage('Test') {
 		steps {
-			sh 'ls -R retwisj/target/'
-			sh 'touch retwisj/target/surefire-reports/TEST-.xml'
-			junit 'retwisj/target/surefire-reports/TEST-.xml'
-			sh 'cat retwisj/target/surefire-reports/TEST-.xml'
+			junit 'retwisj/target/surefire-reports/**/*.xml'
 			}
         }
     }
