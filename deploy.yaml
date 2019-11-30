@@ -105,9 +105,11 @@ metadata:
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
+  type: LoadBalancer
   ports:
   - port: 80
+    protocol: TCP
+    targetPort: 8080
   selector:
     app: retwisj
     tier: frontend
@@ -129,7 +131,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: php-redis
+      - name: retwis
         image: luca83000/retwisj:latest
         resources:
           requests:
@@ -144,4 +146,4 @@ spec:
           # line below:
           # value: env
         ports:
-        - containerPort: 80
+        - containerPort: 8080
