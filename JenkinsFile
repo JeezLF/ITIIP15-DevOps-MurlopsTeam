@@ -30,7 +30,7 @@ node {
 		echo "${PATH}"
 		sh 'ls -lah'
 		echo "docker build -t ${PATH} ${PATH}"
-		sh "docker build -t ${PATH} ${PATH}"
+		sh 'docker build -t ${PATH} ${PATH}'
 		echo 'docker'
    }
 
