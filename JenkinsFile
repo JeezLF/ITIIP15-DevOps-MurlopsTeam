@@ -31,6 +31,7 @@ pipeline {
         }
 	stage('Test') {
 		steps {
+			sh 'touch retwisj/target/surefire-reports/TEST-.xml'
 			junit 'retwisj/target/surefire-reports/TEST-.xml'
 			}
         }
