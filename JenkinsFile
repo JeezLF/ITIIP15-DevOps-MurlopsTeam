@@ -12,13 +12,13 @@ node {
       // Run the maven build
 	  dir("retwisj"){
 		  withEnv(["MVN_HOME=$mvnHome"]) {
-			//sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+			sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
 		  }
 	  }
    }
    stage('Results') {
 		dir("retwisj/target"){
-			//sh 'ls -lah *.war'
+			sh 'ls -lah *.war'
 		}
 		//junit 'TEST-.xml'
 		//archiveArtifacts 'target/*.jar'
