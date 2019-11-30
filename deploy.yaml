@@ -98,13 +98,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontend2
   labels:
     app: retwisj
-    tier: frontend
+    tier: frontend2
 spec:
   # if your cluster supports it, uncomment the following to automatically create
-  # an external load-balanced IP for the frontend service.
+  # an external load-balanced IP for the frontend2 service.
   type: LoadBalancer
   ports:
   - port: 80
@@ -112,23 +112,23 @@ spec:
     targetPort: 8080
   selector:
     app: retwisj
-    tier: frontend
+    tier: frontend2
 ---
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend2
 spec:
   selector:
     matchLabels:
       app: retwisj
-      tier: frontend
+      tier: frontend2
   replicas: 3
   template:
     metadata:
       labels:
         app: retwisj
-        tier: frontend
+        tier: frontend2
     spec:
       containers:
       - name: retwis
