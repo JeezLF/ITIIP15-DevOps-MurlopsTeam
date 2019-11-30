@@ -31,7 +31,8 @@ node {
    stage('Docker') {   
 		echo "${PATH}"
 		sh 'ls -lah'
-		sh 'docker build -t ${PATH}/retwisj ${PATH}'
+		echo "docker build -t ${PATH}/retwisj ${PATH}"
+		sh "docker build -t ${PATH}/retwisj ${PATH}"
 		echo 'docker'
    }
 
