@@ -25,6 +25,7 @@ node {
    }
    
    stage('Docker') {   
+	sh 'pwd'
 		sh 'docker build -t retwisj .'
 		echo 'docker'
    }
