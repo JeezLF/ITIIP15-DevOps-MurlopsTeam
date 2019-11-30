@@ -20,6 +20,9 @@ pipeline {
         }
          stage('Docker') {
             steps {
+		script {
+			docker.withRegistry( 'https://hub.docker.com/repository/docker/luca83000/retwisj', 'DockerHub' )
+			}
                    sh '/usr/bin/docker build -t retwisj:latest .'
                    sh 'docker tag retwisj:latest luca83000/retwisj:latest'
 		   docker.withRegistry( 'https://hub.docker.com/repository/docker/luca83000/retwisj', 'DockerHub' )
