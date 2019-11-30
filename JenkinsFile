@@ -28,7 +28,7 @@ node {
    
    stage('Docker') {   
 		echo "${PATH}"
-		sh 'ls -lah'
+		sh 'ls -R'
 		echo "docker build -t conteneur-retwis ."
 		sh 'docker build -t conteneur-retwis .'
 		echo 'docker'
