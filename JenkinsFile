@@ -28,7 +28,7 @@ node {
 		sh 'pwd'
 		path = 'pwd'
 		echo 'path'
-		echo $path
+		echo '$path'
 		sh 'ls -lah'
 		sh 'docker build -t retwisj .'
 		echo 'docker'
