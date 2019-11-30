@@ -4,29 +4,16 @@ pipeline {
         maven 'M3'
     }
     stages {
-        stage('K8S') {
-            steps {
+		stage('K8S') {
+			steps {
 				sh 'gcloud auth activate-service-account --key-file /home/clementlegrosdw/murlops-155b8e82c1d3.json'
 				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
-            }
-        }
-		stage('pull VM') {
-            steps {
-				sh 'docker pull luca83000/retwisj:latest'
-				echo 'First'
-            }
-        }
-		stage('Deployment') {
-            steps {
-				sh 'kubectl create deployment testTest --image=luca83000/retwisj:latest'
-				echo 'Second'
-            }
-        }
-		stage('Service') {
-            steps {
-				sh 'kubectl expose deployment testTest --type=LoadBalancer --port 8080'
-				echo 'Third'
-            }
-        }
+			}
+		}
+		stage('yaml') {
+			steps {
+				sh 'kubectl apply deploy.yaml'
+			}
+		} 		
     }
 }
