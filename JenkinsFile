@@ -33,6 +33,7 @@ pipeline {
 		steps {
 			sh 'touch retwisj/target/surefire-reports/TEST-.xml'
 			junit 'retwisj/target/surefire-reports/TEST-.xml'
+			sh 'cat retwisj/target/surefire-reports/TEST-.xml'
 			}
         }
     }
