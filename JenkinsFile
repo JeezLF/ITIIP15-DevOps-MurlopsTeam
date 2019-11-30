@@ -22,7 +22,7 @@ pipeline {
             steps {
                    sh '/usr/bin/docker build -t retwisj:latest .'
                    sh 'docker tag retwisj:latest luca83000/retwisj:latest'
-		   credentialsID: 'DockerHub',
+		   docker.withRegistry( 'https://hub.docker.com/repository/docker/luca83000/retwisj', 'DockerHub' )
                    sh 'docker push luca83000/retwisj:latest'
             }
         }
