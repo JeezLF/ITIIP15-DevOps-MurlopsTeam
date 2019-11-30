@@ -29,5 +29,8 @@ pipeline {
 			}
             }
         }
+	stage('Test') {
+            junit 'retwisj/out/report/TEST-.xml'
+        }
     }
 }
