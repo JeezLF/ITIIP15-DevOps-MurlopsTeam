@@ -55,10 +55,10 @@ pipeline {
 					sh 'ls -lah'
 				}
 				jacoco( 
-				  execPattern: 'target/*.exec',
-				  classPattern: 'target/site/*',
-				  sourcePattern: 'src/main/java',
-				  exclusionPattern: 'src/test*'
+				  execPattern: 'retwis/target/*.exec',
+				  classPattern: 'retwis/target/site/*',
+				  sourcePattern: 'retwis/src/main/java',
+				  exclusionPattern: 'retwis/src/test*'
 				)
 			}
 		}
