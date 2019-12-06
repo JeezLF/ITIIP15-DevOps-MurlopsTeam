@@ -49,11 +49,7 @@ pipeline {
             }
         }
 		
-		stage('Finition Jacoco'){
-			steps{
-	
-			}
-		}
+
 		
     }
 }
