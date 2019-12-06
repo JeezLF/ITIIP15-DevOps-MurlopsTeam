@@ -27,7 +27,7 @@ pipeline {
                     sh 'docker push luca83000/retwisj:${BUILD_NUMBER}'
 				    sh 'pwd'
 					sh  '''
-						sed -i -r "s/.*image: luca83000.*/        image: luca83000\/retwisj:${BUILD_NUMBER}/g" ../pipelinecd/deploy.yaml				   
+						sed -i -r "s/.*image: luca83000.*/        image: luca83000/retwisj:${BUILD_NUMBER}/g" ../pipelinecd/deploy.yaml				   
 						'''
 				   }
 				}
