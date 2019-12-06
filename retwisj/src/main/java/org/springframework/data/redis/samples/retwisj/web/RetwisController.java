@@ -180,10 +180,6 @@ public class RetwisController {
 		model.addAttribute("moreposts", retwis.hasMoreTimeline(range));
 		model.addAttribute("posts", retwis.timeline(range));
 		model.addAttribute("users", retwis.newUsers(new Range()));
-		JFrame f = new JFrame();
-		f.setTitle("Clément est réné");
-		f.setVisible(true);
-		f.setSize(100, 100);
 		return "timeline";
 	}
 
