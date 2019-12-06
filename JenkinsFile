@@ -29,19 +29,7 @@ pipeline {
 
 	stage('Scan with Probely') {
       		steps {
-        		curl https://api.probely.com/targets/AxtkqTE0v3E-/scan_now/ \
-  				-X POST \
-  				-H "Content-Type: application/json" \
-  				-H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnQiOiJwcm9iZWx5IiwidXNlcm5hbWUiOiJ1NGNLTXBFY0xxclEiLCJqdGkiOiIzZ0RXZlJ6RjRvaEoifQ.RmbpTJrIRsNktoGftLagmILDqTd5-hocADrwHp6JbXU"
-			def response = sh(script: 'curl https://some-host/some-service/getApi?apikey=someKey', returnStdout: true)
-			curl https://api.probely.com/targets/AxtkqTE0v3E-/scans/response.id/ \
-  				-X GET \
-  				-H "Content-Type: application/json" \
-  				-H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnQiOiJwcm9iZWx5IiwidXNlcm5hbWUiOiJ1NGNLTXBFY0xxclEiLCJqdGkiOiIzZ0RXZlJ6RjRvaEoifQ.RmbpTJrIRsNktoGftLagmILDqTd5-hocADrwHp6JbXU"
-			curl https://api.probely.com/targets/AxtkqTE0v3E-/findings/?scan=response.id&page=1 \
-  				-X GET \
-  				-H "Content-Type: application/json" \
-  				-H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnQiOiJwcm9iZWx5IiwidXNlcm5hbWUiOiJ1NGNLTXBFY0xxclEiLCJqdGkiOiIzZ0RXZlJ6RjRvaEoifQ.RmbpTJrIRsNktoGftLagmILDqTd5-hocADrwHp6JbXU"
+        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
       			}
     }
 
