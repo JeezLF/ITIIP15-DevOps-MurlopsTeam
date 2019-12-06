@@ -53,7 +53,7 @@ pipeline {
 			steps{
 				jacoco( 
 				  execPattern: 'retwisj/*.exec',
-				  classPattern: 'retwisj/classes',
+				  classPattern: 'retwisj/target/site/jacoco/index.html',
 				  sourcePattern: 'retwisj/src/main/java',
 				  exclusionPattern: 'retwisj/src/test*'
 				)
