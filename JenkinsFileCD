@@ -13,6 +13,7 @@ pipeline {
 		stage('yaml') {
 			steps {
 				sh 'pwd'
+				sh 'ls -la'
 				sh 'kubectl apply -f ./deploy.yaml'
 			}
 		} 		

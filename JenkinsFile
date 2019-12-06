@@ -26,8 +26,7 @@ pipeline {
                     sh 'docker tag retwisj:${BUILD_NUMBER} luca83000/retwisj:${BUILD_NUMBER}'
                     sh 'docker push luca83000/retwisj:${BUILD_NUMBER}'
 				    sh 'pwd'
-					sh  '''
-					
+					sh  '''					
 						sed -i -r -e "s/retwisj:.*/retwisj:${BUILD_NUMBER}/g" ../pipelinecd/deploy.yaml				   
 						'''
 				   }
