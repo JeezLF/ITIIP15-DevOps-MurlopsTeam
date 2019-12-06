@@ -49,12 +49,16 @@ pipeline {
             }
         }
 		
-		stage('Jacoco') {
-			steps {
-				jacoco( 
-					  execPattern: 'retwisj/*.exec',
-				)
-			}
+		post {
+        always {
+				step([
+				  $class           : 'JacocoPublisher',
+				  execPattern      : 'build/jacoco/jacoco.exec',
+				  classPattern     : 'build/classes/main',
+				  sourcePattern    : 'src/main/java',
+				  exclusionPattern : '**/*Test.class'
+				])
+		    }
 		}
 		
     }
