@@ -132,7 +132,7 @@ spec:
     spec:
       containers:
       - name: retwis
-        image: monImage
+        image: luca83000/retwisj:12
         resources:
           requests:
             cpu: 100m
