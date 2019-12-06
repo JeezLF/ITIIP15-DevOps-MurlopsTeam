@@ -51,8 +51,8 @@ pipeline {
 		
 		stage('Jacoco'){
 			steps{
+				 sh 'ls -lah'
 				jacoco( 
-				  sh 'ls -lah'
 				  execPattern: 'target/jacoco.exec',
 				  classPattern: 'target/site/*',
 				  sourcePattern: 'src/main/java',
