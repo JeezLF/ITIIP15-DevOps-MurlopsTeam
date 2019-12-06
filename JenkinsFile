@@ -24,6 +24,8 @@ pipeline {
 	stage('Test') {
 		steps {
 			junit 'retwisj/target/surefire-reports/**/*.xml'
+			archive 'target/*.jar'
+			step( [ $class: 'JacocoPublisher' ] )
 			}
         }
 
