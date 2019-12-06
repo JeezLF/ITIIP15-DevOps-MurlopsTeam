@@ -39,5 +39,10 @@ pipeline {
 			junit 'retwisj/target/surefire-reports/**/*.xml'
 			}
         }
+	stage('Scan with Probely') {
+      		steps {
+        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
+      			}
+    }
     }
 }
