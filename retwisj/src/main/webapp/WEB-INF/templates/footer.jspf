@@ -12,7 +12,7 @@
 	        The code is open-source and available on <a href="https://github.com/SpringSource/spring-data-keyvalue-examples">Github</a>.
 		</p>
         <p>Follow the team on Twitter: <a href="https://twitter.com/costinl">Costin</a>, <a href="https://twitter.com/markpollack">Mark</a>, <a href="https://twitter.com/jencompgeek">Jennifer</a></p>
-        <p><a href="https://twitter.com/springsource"><img src="<c:url value="/static/images/springsource-logo.png"/>" alt="Sponsored by SpringSource"/></a></p>	        
+        <p><a href="https://twitter.com/springsource"><img src="<c:url value="/static/images/murlops_source_logo.png"/>" alt="Sponsored by SpringSource"/></a></p>	        
 	  </div>
 	</body>
 </html>
