@@ -36,7 +36,6 @@ public class WebPost {
 	}
 
 	public WebPost(Post post) {
-
 		String tempTime = WebUtils.timeInWords(Long.valueOf(post.getTime()));
 		int lastIndexOf = tempTime.lastIndexOf("#");
 		if (lastIndexOf > 0) {
