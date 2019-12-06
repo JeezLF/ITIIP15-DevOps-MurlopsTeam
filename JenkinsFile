@@ -51,7 +51,9 @@ pipeline {
 		
 		stage('Jacoco'){
 			steps{
-				 sh 'ls -lah'
+				dir("retwisj"){
+					sh 'ls -lah'
+				}
 				jacoco( 
 				  execPattern: 'target/jacoco.exec',
 				  classPattern: 'target/site/*',
