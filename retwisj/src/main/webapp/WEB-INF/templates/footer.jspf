@@ -20,9 +20,10 @@
 			href="https://github.com/SpringSource/spring-data-keyvalue-examples">Github</a>.
 	</p>
 	<p>
-		Follow the team on Twitter: <a href="https://twitter.com/costinl">Costin</a>,
-		<a href="https://twitter.com/markpollack">Mark</a>, <a
-			href="https://twitter.com/jencompgeek">Jennifer</a>
+		Murlops team: <a href=https://c4.wallpaperflare.com/wallpaper/655/415/786/murlocs-hearthstone-heroes-of-warcraft-artwork-digital-art-wallpaper-preview.jpg>Bignelle</a>, <a
+			href="https://i.pinimg.com/originals/93/8e/09/938e09c525a4c3d36e917795797993b2.jpg">Jeezlf</a>, <a
+			href="https://i.servimg.com/u/f86/18/83/03/02/tm/51789810.jpg">Zoouum</a>, <a
+			href="https://i.pinimg.com/originals/bc/90/97/bc909748c528a440a4087d62eebb2f87.jpg">Zrheam</a>
 	</p>
 	<p>
 		<a href="https://twitter.com/springsource"><img
@@ -31,7 +32,7 @@
 	</p>
 	<img
 		src="<c:url value="/static/images/murloc_student.png"/>"
-		width="641" height="756">
+		width="641" height="709">
 </div>
 </body>
 </html>
