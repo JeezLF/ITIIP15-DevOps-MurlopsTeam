@@ -25,7 +25,8 @@ pipeline {
                     sh '/usr/bin/docker build -t retwisj:${BUILD_NUMBER} .'
                     sh 'docker tag retwisj:${BUILD_NUMBER} luca83000/retwisj:${BUILD_NUMBER}'
                     sh 'docker push luca83000/retwisj:${BUILD_NUMBER}'
-				    //sh "sed -i -r "s/.*image: luca83000.*/        image: luca83000\/retwisj:${BUILD_NUMBER}/g" deploy.yaml"				   
+				    sh 'pwd'
+					//sh "sed -i -r "s/.*image: luca83000.*/        image: luca83000\/retwisj:${BUILD_NUMBER}/g" deploy.yaml"				   
 				   }
 				}
             }
