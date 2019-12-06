@@ -16,7 +16,7 @@ pipeline {
 				sh 'ls -la'
 				sh 'cat deploy.yaml'
 				sh 'cat ../pipelineci/deploy.yaml'	
-				sh 'kubectl apply -f ./deploy.yaml'
+				sh 'kubectl apply -f ../pipelineci/deploy.yaml'
 			}
 		} 		
     }
