@@ -16,8 +16,8 @@ pipeline {
             steps {
                dir("retwisj"){
                        sh 'mvn -Dmaven.test.failure.ignore clean package'
-		       sh '/usr/bin/docker build -t retwisj:${BUILD_NUMBER} .'
                }
+		sh '/usr/bin/docker build -t retwisj:${BUILD_NUMBER} .'
             }
         }
 
