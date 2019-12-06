@@ -3,6 +3,7 @@ pipeline {
     tools {
         maven 'M3'
     }
+
     stages {
         //stage('scm'){
         //    steps{
@@ -15,14 +16,27 @@ pipeline {
             steps {
                dir("retwisj"){
                        sh 'mvn -Dmaven.test.failure.ignore clean package'
+		       sh '/usr/bin/docker build -t retwisj:${BUILD_NUMBER} .'
                }
             }
         }
-         stage('Docker') {
+
+	stage('Test') {
+		steps {
+			junit 'retwisj/target/surefire-reports/**/*.xml'
+			}
+        }
+
+	stage('Scan with Probely') {
+      		steps {
+        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
+      			}
+    }
+
+         stage('Docker push') {
             steps {
 				script {
 					docker.withRegistry( '', 'DockerHub' ) {			
-                    sh '/usr/bin/docker build -t retwisj:${BUILD_NUMBER} .'
                     sh 'docker tag retwisj:${BUILD_NUMBER} luca83000/retwisj:${BUILD_NUMBER}'
                     sh 'docker push luca83000/retwisj:${BUILD_NUMBER}'
 				    sh 'pwd'
@@ -34,15 +48,5 @@ pipeline {
 				}
             }
         }
-	stage('Test') {
-		steps {
-			junit 'retwisj/target/surefire-reports/**/*.xml'
-			}
-        }
-	stage('Scan with Probely') {
-      		steps {
-        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
-      			}
-    }
     }
 }
