@@ -55,7 +55,7 @@ pipeline {
 					sh 'ls -lah'
 				}
 				jacoco( 
-				  execPattern: 'target/jacoco.exec',
+				  execPattern: 'target/*.exec',
 				  classPattern: 'target/site/*',
 				  sourcePattern: 'src/main/java',
 				  exclusionPattern: 'src/test*'
