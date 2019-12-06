@@ -51,7 +51,7 @@ pipeline {
 		
 		stage('Jacoco'){
 			steps{
-				dir("retwisj"){
+				dir("retwisj/target"){
 					sh 'ls -lah'
 				}
 				jacoco( 
