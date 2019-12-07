@@ -6,7 +6,7 @@ pipeline {
     stages {
 		stage('K8S') {
 			steps {
-				sh 'gcloud auth activate-service-account --key-file /home/clementlegrosdw/murlops-155b8e82c1d3.json'
+				sh 'gcloud auth activate-service-account credentialsId: 'pipelinecd''
 				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
 			}
 		}
