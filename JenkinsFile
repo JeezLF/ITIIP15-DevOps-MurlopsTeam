@@ -48,16 +48,20 @@ pipeline {
             }
         }
 		
-		stage('Jacoco') {
-			steps {
+		stage('Jacoco'){
+			steps{
+				dir("retwisj/target"){
+					sh 'ls -lah'
+				}
 				jacoco( 
-					  execPattern: 'target/*.exec',
-					  classPattern: 'target/classes',
-					  sourcePattern: 'src/main/java',
-					  exclusionPattern: 'src/test*'
+				  execPattern: 'retwis/target/*.exec',
+				  classPattern: 'retwis/target/site/*',
+				  sourcePattern: 'retwis/src/main/java',
+				  exclusionPattern: 'retwis/src/test*'
 				)
 			}
 		}
+
 		
     }
 }
