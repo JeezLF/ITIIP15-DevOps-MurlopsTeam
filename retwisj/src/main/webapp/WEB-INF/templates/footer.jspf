@@ -31,7 +31,7 @@
 			alt="Sponsored by SpringSource" /></a>
 	</p>
 	<img
-		src="<c:url value="/static/images/murloc_student_.png"/>"
+		src="<c:url value="/static/images/murloc_student.png"/>"
 		width="641" height="709">
 </div>
 </body>
