@@ -18,6 +18,12 @@ pipeline {
 				sh 'cat ../pipelineci/deploy.yaml'	
 				sh 'kubectl apply -f ../pipelineci/deploy.yaml'
 			}
-		} 		
+		} 
+
+		stage('Scan with Probely') {
+      		steps {
+        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
+      			}
+    }		
     }
 }

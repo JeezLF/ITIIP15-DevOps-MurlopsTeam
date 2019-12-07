@@ -27,11 +27,7 @@ pipeline {
 			}
         }
 
-	stage('Scan with Probely') {
-      		steps {
-        		probelyScan targetId: '2Yf589vvQXop', credentialsId: 'Probely'
-      			}
-    }
+	
 
          stage('Docker push') {
             steps {
