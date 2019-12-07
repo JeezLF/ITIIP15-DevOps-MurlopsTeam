@@ -7,13 +7,13 @@ pipeline {
 		stage('K8S') {
 			steps {
 			
-				withCredentials([file(credentialsId: 'pipelinecd', variable: 'GC_KEY')]) {
-					sh 'gcloud auth activate-service-account --key-file=${GC_KEY}'
-					sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
-				}
+				//withCredentials([file(credentialsId: 'pipelinecd', variable: 'GC_KEY')]) {
+				//	sh 'gcloud auth activate-service-account --key-file=${GC_KEY}'
+				//	sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
+				//}
 				 
-				//sh 'gcloud auth activate-service-account --key-file /home/clementlegrosdw/murlops-155b8e82c1d3.json'
-				//sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
+				sh 'gcloud auth activate-service-account --key-file /home/clementlegrosdw/murlops-155b8e82c1d3.json'
+				sh 'gcloud container clusters get-credentials murlops-cluster1 --zone europe-west1-b --project murlops'
 			}
 		}
 		stage('yaml') {
